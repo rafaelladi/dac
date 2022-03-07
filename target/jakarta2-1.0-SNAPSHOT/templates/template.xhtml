@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xml:lang="en" lang="en">
+<ui:composition>
+    <div style="height: 400px">
+        <div style="border-width: 1px; border-style: solid; height: 25%">
+            <ui:insert name="header">
+                <ui:include src="/templates/header.xhtml"/>
+            </ui:insert>
+        </div>
+        <div style="border-width: 1px; border-style: solid; height: 50%">
+            <h3>Test</h3>
+        </div>
+        <div style="border-width: 1px; border-style: solid; height: 25%">
+            <ui:insert name="footer">
+                <ui:include src="/templates/footer.xhtml"/>
+            </ui:insert>
+        </div>
+    </div>
+</ui:composition>
+</html>

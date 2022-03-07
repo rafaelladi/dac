@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xml:lang="en" lang="en">
+<h:head>
+    <title>Create company</title>
+    <h:outputStylesheet library="default" name="css/bootstrap.min.css" />
+</h:head>
+<h:body>
+    <h3>Create company</h3>
+    <h:form>
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <h:inputText value="#{companyBean.company.name}" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><h:commandButton value="Save" action="#{companyBean.save()}"/></td>
+            </tr>
+        </table>
+    </h:form>
+    <h:outputScript library="default" name="js/bootstrap.bundle.min.js" />
+</h:body>
+</html>

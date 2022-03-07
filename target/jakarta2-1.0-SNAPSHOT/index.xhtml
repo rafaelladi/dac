@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xml:lang="en" lang="en">
+<h:head>
+    <title>Companies</title>
+<!--    <meta charset="utf-8" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <h:outputStylesheet library="default" name="css/bootstrap.min.css" />
+</h:head>
+<h:body>
+    <ui:insert name="header">
+        <ui:include src="/templates/header.xhtml">
+            <ui:param name="title" value="Companies"/>
+        </ui:include>
+    </ui:insert>
+    <h:form prependId="false">
+        <h:dataTable var="company" value="#{companyBean.companies}"
+                     border="1" cellpadding="2" cellspacing="2">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                <h:outputText value="#{company.id}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{company.name}" />
+            </h:column>
+        </h:dataTable>
+    </h:form>
+    <h:link value="Add new company" outcome="new_company.xhtml" />
+    <h:outputScript library="default" name="js/bootstrap.bundle.min.js" />
+</h:body>
+</html>
